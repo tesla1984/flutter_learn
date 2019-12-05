@@ -11,7 +11,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RouterTestRoute(),
+      routes: {
+        "new_page": (context) => NewRoute(),
+        "/": (context) => MyHomePage(title: "Flutter Demo Home page"),
+      },
+//      home: MyHomePage(title: "Flutter Demo Home page"),
     );
   }
 }
@@ -148,15 +152,16 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("open new route"),
               textColor: Colors.blue,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      fullscreenDialog: true,
-                      maintainState: false,
-                      builder: (context) {
-                        return NewRoute();
-                      }),
-                );
+//                Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                      fullscreenDialog: true,
+//                      maintainState: false,
+//                      builder: (context) {
+//                        return NewRoute();
+//                      }),
+//                );
+                Navigator.of(context).pushNamed("new_page");
               },
             )
           ],
