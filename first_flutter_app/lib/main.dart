@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/3-1.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,11 +12,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
-        "new_page": (context) => NewRoute(),
-        "/": (context) => MyHomePage(title: "Flutter Demo Home page"),
-      },
-//      home: MyHomePage(title: "Flutter Demo Home page"),
+//      routes: {
+//        "new_page": (context) => NewRoute(),
+//        "/": (context) => MyHomePage(title: "Flutter Demo Home page"),
+//      },
+      home: CounterWidget(),
     );
   }
 }
