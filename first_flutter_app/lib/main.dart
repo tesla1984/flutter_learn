@@ -1,5 +1,6 @@
 import 'package:first_flutter_app/3-1.dart';
 import 'package:first_flutter_app/3-2.dart';
+import 'package:first_flutter_app/3-3.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
 //        "new_page": (context) => NewRoute(),
 //        "/": (context) => MyHomePage(title: "Flutter Demo Home page"),
 //      },
-      home: StatePage(),
+      home: TextPage(),
     );
   }
 }
